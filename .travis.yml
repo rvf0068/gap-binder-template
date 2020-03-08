@@ -3,7 +3,7 @@ env:
   global:
     # For details how this works, and what other configurations you
     # can make, please look at <https://github.com/gap-system/pkg-ci-scripts>
-    #- GAP_PKGS_TO_CLONE="SomeOtherPackage"
+    - GAP_PKGS_TO_CLONE="yags/yags"
     #- GAP_PKGS_TO_BUILD="io profiling SomeOtherPackage" # note: io and profiling always must be built
 
 addons:
@@ -33,7 +33,6 @@ branches:
 
 before_script:
   - git clone https://github.com/gap-system/pkg-ci-scripts.git scripts
-  - git clone https://github.com/yags/yags.git pkg/yags
   - scripts/build_gap.sh
 script:
   - scripts/build_pkg.sh && scripts/run_tests.sh
