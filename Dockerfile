@@ -8,6 +8,8 @@ RUN jupyter-nbextension install rise --user --py
 
 RUN jupyter-nbextension enable rise --user --py
 
+RUN git clone https://github.com/yags/yags.git 
+
 USER gap
 
 WORKDIR $HOME/mygapproject
