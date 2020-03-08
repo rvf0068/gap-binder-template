@@ -1,3 +1,0 @@
-[submodule "pkg/yags"]
-	path = pkg/yags
-	url = git@github.com:yags/yags.git
