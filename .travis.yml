@@ -34,9 +34,9 @@ branches:
 before_script:
   - git clone https://github.com/gap-system/pkg-ci-scripts.git scripts
   - scripts/build_gap.sh
-  - git clone https://github.com/yags/yags.git 
 script:
   - scripts/build_pkg.sh && scripts/run_tests.sh
 after_script:
   - bash scripts/gather-coverage.sh
   - bash <(curl -s https://codecov.io/bash)
+  - git clone https://github.com/yags/yags.git 
