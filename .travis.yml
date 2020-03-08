@@ -33,6 +33,7 @@ branches:
 
 before_script:
   - git clone https://github.com/gap-system/pkg-ci-scripts.git scripts
+  - git clone https://github.com/yags/yags.git pkg/yags
   - scripts/build_gap.sh
 script:
   - scripts/build_pkg.sh && scripts/run_tests.sh
